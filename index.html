@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMEN - Galería de arte</title>
+  <link rel="icon" href="/img/lumen-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.typekit.net/wtx2iei.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <header class="site-header header--transparent">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="index.html">
+          <img class="logo-op" src="/img/lumen-logo.png" alt="LUMEN - Galería de arte - Logo" /> </a>
+        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <a class="navbar-brand me-auto" href="index.html">
+              <img class="logo-op" src="/img/lumen-logo.png" alt="LUMEN - Galería de arte - Logo" /> </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Explorá Arte
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Realismo</a></li>
+                  <li><a class="dropdown-item" href="#">Gouache</a></li>
+                  <li><a class="dropdown-item" href="#">Impresionismo</a></li>
+                  <li><a class="dropdown-item" href="#">Expresionismo abstracto</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./pages/exhibiciones.html">Exhibiciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./pages/sobre-nosotros.html">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="./pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+
+            <div class="offcanvas-social mt-4 d-flex gap-3 justify-content-start">
+              <a href="https://www.instagram.com" target="_blank" class="social-link">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="#f0e4af" stroke-width="2" />
+                  <circle cx="12" cy="12" r="4" stroke="#f0e4af" stroke-width="2" />
+                  <circle cx="17" cy="7" r="1.2" fill="#f0e4af" />
+                </svg>
+              </a>
+
+              <a href="https://www.facebook.com" target="_blank" class="social-link">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#f0e4af" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.117 3H12.26c-2.39 0-4.04 1.57-4.04 4v2.31H6v3.28h2.22V21h3.44v-8.36h2.62l.35-3.28h-2.97V7.3c0-.94.26-1.57 1.62-1.57h1.87V3z" />
+                </svg> </a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.lumenmuseum.it/buy-tickets" class="tickets-button" target="_blank"
+          rel="noopener noreferrer">Comprar
+          entradas</a>
+        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade carousel-home" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/img/lumen-slide1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1><i>Aase</i> & <i>Harald Nørregaard</i></h1>
+            <h2>EDVARD MUNCH, 1899.</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="/img/lumen-slide2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+
+            <h1> Paisaje con <i>caminante</i>
+            </h1>
+            <h2>THOMAS FEARNLEY, 1830.</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="/img/lumen-slide3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1>La <i>adoración</i> de los <i>pastores</i></h1>
+            <h2>ANDREA MANTEGNA, 1459.</h2>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main>
+
+
+
+    <section class="quienes-somos-container">
+
+      <div class="quienes-somos">
+
+        <div class="quienes-intro">
+          <p class="mb-0 subtitle">SOBRE NOSOTROS</p>
+          <h2 class="mb-3">Inspiramos a <i>crear y experimentar el Arte</i></h2>
+          <p>
+            En LUMEN creemos que el arte es un puente hacia nuevas miradas. Curamos obras y experiencias que invitan a
+            detenerse, contemplar y conectar con lo esencial.
+          </p>
+        </div>
+
+        <div class="quienes-imagen2">
+          <img src="/img/main-quienes-somos-2.jpg" alt="LUMEN - Quienes somos">
+        </div>
+
+        <div class="quienes-imagen1">
+          <img src="/img/main-quienes-somos-1.jpg" alt="LUMEN - Quienes somos">
+        </div>
+
+        <div class="quienes-texto2">
+          <p class="mb-3">
+            LUMEN nace del deseo de compartir la sensibilidad artística con profundidad y autenticidad. Nuestro trabajo
+            busca revelar historias, gestos y emociones detrás de cada obra.
+
+          </p>
+          <p>
+            Somos una galería dedicada a acercar el arte al público con una mirada contemporánea. Seleccionamos obras
+            que inspiran, emocionan y generan diálogo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="colecciones">
+      <div class="colecciones-text mb-5">
+        <p class="mb-0 subtitle">COLECCIONES DESTACADAS</p>
+        <h2>Explorá arte</h2>
+      </div>
+
+
+      <div class="colecciones-arte">
+        <a href="#" class="colecciones-card">
+          <div class="card" style="background-image: url('/img/lumen-realismo.jpg');">
+            <div class="card-textos">
+              <h3>Realismo</h3>
+              <p>La pintura que retrata la vida tal como es, con precisión y honestidad visual.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="colecciones-card">
+          <div class="card" style="background-image: url('/img/lumen-gouche.jpg');">
+            <div class="card-textos">
+              <h3>Gouche</h3>
+              <p>Una técnica opaca y luminosa, apreciada por su textura suave y control pictórico.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="colecciones-card">
+          <div class="card" style="background-image: url('/img/lumen-impresionismo.jpg');">
+            <div class="card-textos">
+              <h3>Impresionismo</h3>
+              <p>Obras que capturan instantes fugaces a través de luz vibrante y pinceladas sueltas.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="colecciones-card">
+          <div class="card" style="background-image: url('/img/lumen-arte-abstracto.jpg');">
+            <div class="card-textos">
+              <h3>Expresionismo abstracto</h3>
+              <p>Arte espontáneo y emocional, donde el gesto y el color narran lo inefable.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer  text-center">
+    <div class="footer-inner">
+
+      <a href="index.html"><img src="/img/lumen-logo.png" alt="LUMEN - Galería de arte - Logo"></a>
+
+      <div class="footer-menu text-center">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Explorá arte</a></li>
+          <li><a href="./pages/exhibiciones.html">Exhibiciones</a></li>
+          <li><a href="./pages/sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info text-center">
+        <ul>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/8rGQC5qNHjZtCMsb7"> Av. del
+              Libertador 2475, CABA</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="mailto:info@lumen.com.ar">info@lumen.com.ar</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <a href="#" id="backToTop" aria-label="Volver arriba">↑</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
