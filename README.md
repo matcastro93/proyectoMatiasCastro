@@ -1,3 +1,5 @@
+<h2>🎨 LUMEN – Galería de Arte</h2>
+
 Este repositorio contiene el desarrollo del sitio web <b>LUMEN</b>, una  <i>galería de arte contemporáneo</i> pensada para exhibir obras, artistas y experiencias culturales.
 
 El proyecto incluye la <b>estructura completa del sitio, un diseño responsive, y una estética minimalista</b> inspirada en espacios expositivos reales.
