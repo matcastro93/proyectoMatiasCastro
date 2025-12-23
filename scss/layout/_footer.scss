@@ -1,10 +1,18 @@
-
 /*--FOOTER--*/
 
 .footer {
-    background-color: #191a11;
+    background-color: $color-accent-dark;
     padding: 3rem;
-    color: #9a9370;
+    color: $color-light;
+
+    a {
+        color: $color-light;
+
+        &:hover {
+            color: $color-accent;
+            text-decoration: underline;
+        }
+    }
 }
 
 .footer-inner {
@@ -17,26 +25,19 @@
     align-items: center;
 }
 
-.footer a {
-    color: #9a9370;
-}
+.footer-menu {
+    ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        justify-content: center;
+    }
 
-.footer a:hover {
-    color: #f0e4af;
-    text-decoration: underline;
-}
-
-.footer-menu ul {
-    display: flex;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    justify-content: center;
-}
-
-.footer-menu li {
-    margin: 0;
+    li {
+        margin: 0;
+    }
 }
 
 #backToTop {
@@ -45,19 +46,17 @@
     right: 30px;
     width: 40px;
     height: 40px;
-    background: #27281b;
-    color: #f0e4af;
+    background: $color-bg-dark;
+    color: $color-accent;
     text-decoration: none;
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    @extend %flex-center;
+    box-shadow: 0 4px 20px #00000033;
     transition: transform 0.3s ease;
     z-index: 999;
     border-radius: 2px;
-}
 
-#backToTop:hover {
-    transform: translateY(-3px);
+    &:hover {
+        transform: translateY(-3px);
+    }
 }

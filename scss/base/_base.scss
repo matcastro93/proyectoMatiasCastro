@@ -1,11 +1,10 @@
-
 /*--AJUSTES GENERALES--*/
 
 body {
-    background-color: #eeede5;
-    font-family: poppins, sans-serif;
+    background-color: $color-bg-light;
+    font-family: $font-principal;
     font-size: 1rem;
-    color: #000000;
+    color: $color-principal;
 }
 
 h1,
@@ -14,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: ivypresto-display, serif;
+    font-family: $font-secondary;
     font-weight: 300;
 }
 
@@ -66,19 +65,19 @@ h2 {
 }
 
 .btn-primary {
-        background-color: #27281b;
-    color: #f0e4af;
+    background-color: $color-bg-dark;
+    color: $color-accent;
     font-size: 1rem;
     padding: 10px 20px;
-    border: 1px solid #27281b;
+    border: 1px solid $color-bg-dark;
     border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
 
-.btn-primary:hover{
-    background-color: #f0e4af;
-    border-color: #f0e4af;
-    border: 1px solid #27281b;
-    color:#27281b;
+    &:hover {
+        background-color: $color-accent;
+        border-color: $color-accent;
+        border: 1px solid $color-bg-dark;
+        color: $color-bg-dark;
+    }
 }
