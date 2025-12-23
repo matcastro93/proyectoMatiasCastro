@@ -2,34 +2,34 @@
 
 .site-header {
     width: 100%;
-    z-index: 10;
-}
+    z-index: $z-header;
 
-.site-header .navbar {
-    height: 7em;
-    margin: 0;
-
-    display: flex;
-    align-items: center;
+    .navbar {
+        height: $header-height;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .logo-op {
     opacity: 1;
     transition: opacity 0.25s ease;
+
+    &:hover {
+        opacity: 0.75;
+    }
 }
 
-.logo-op:hover {
-    opacity: 0.75;
-}
 
 .navbar-toggler {
     border: none;
     padding: 0;
     font-size: 1.25rem;
-}
 
-.navbar-toggler:focus {
-    box-shadow: none;
+    &:focus {
+        box-shadow: none;
+    }
 }
 
 .navbar-toggler-icon {
@@ -37,143 +37,159 @@
 }
 
 .nav-link {
-    font-family: ivypresto-display, serif;
+    font-family: $font-secondary;
     font-size: 1.35rem;
     font-weight: 300;
     position: relative;
     transition: color 0.3s ease;
 }
 
-
-
 .dropdown-menu {
-    background-color: #27281b;
+    background-color: $color-bg-dark;
     border: 0;
     border-radius: 0;
     padding: 0.6rem 0;
 }
 
 .dropdown-item {
-    font-family: ivypresto-display, serif;
+    font-family: $font-secondary;
     font-size: 1.2rem;
     font-weight: 300;
     padding: 0.5rem 1.2rem;
-    color: #9a9370;
+    color: $color-light;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-accent;
+        text-decoration: underline;
+    }
 }
 
-.dropdown-item:hover {
-    background-color: transparent;
-    color: #f0e4af;
-    text-decoration: underline;
-}
 
 .tickets-button {
-    background-color: #27281b;
-    color: #f0e4af;
+    background-color: $color-bg-dark;
+    color: $color-accent;
     font-size: 1rem;
     padding: 10px 20px;
-    border: 1px solid #27281b;
+    border: 1px solid $color-bg-dark;
     border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s background-color;
-}
+    transition: background-color 0.3s ease, color 0.3s ease;
 
-.tickets-button:hover {
-    background-color: #f0e4af;
-    color: #27281b;
+    &:hover {
+        background-color: $color-accent;
+        color: $color-bg-dark;
+    }
 }
 
 
 .offcanvas {
-    background-color: #27281b;
-}
+    background-color: $color-bg-dark;
 
+    .btn-close {
+        background-size: 1.5em;
+        --bs-btn-close-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23f0e4af' stroke-width='2' stroke-linecap='round' d='M4.5 4.5l7 7m0-7l-7 7'/%3E%3C/svg%3E");
+        opacity: 1;
+    }
 
-.offcanvas .btn-close {
-    background-size: 1.5em;
-    --bs-btn-close-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23f0e4af' stroke-width='2' stroke-linecap='round' d='M4.5 4.5l7 7m0-7l-7 7'/%3E%3C/svg%3E");
-    opacity: 1;
-}
+    .svg {
+        transition: opacity 0.25s ease;
 
-.offcanvas-social svg {
-    transition: opacity 0.25s ease;
-}
-
-.offcanvas-social svg:hover {
-    opacity: 0.7;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 
 /*HEADER TRANSPARENTE*/
 
-.header--transparent .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0;
-    background: transparent;
-    z-index: 10;
-}
+.header--transparent {
 
-.header--transparent .nav-link {
-    color: #9a9370;
-}
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        z-index: $z-header;
+    }
 
-.header--transparent .nav-link:hover,
-.header--transparent .nav-link.active {
-    color: #f0e4af;
-}
+    .navbar-nav {
 
-.header--transparent .navbar-nav .nav-link.active, .header--transparent .navbar-nav .nav-link.show{
-    color:#e5d9a7;
-}
+        .nav-link {
+            color: $color-light;
 
+            &:hover,
+            &.active {
+                color: $color-accent;
+            }
+
+            &.show {
+                color: $color-accent-soft;
+            }
+
+        }
+    }
+}
 
 /*HEADER LIGHT*/
 
-.header--light .navbar {
-    background-color: #eeede5;
+.header--light {
+    .navbar {
+        background-color: $color-bg-light;
+    }
 
+    .navbar-nav {
+
+        .nav-link {
+            color: $color-bg-dark;
+
+            &:hover,
+            &.active,
+            &.show {
+                color: $color-light;
+            }
+        }
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(39,40,27)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
 }
 
-.header--light .nav-link {
-    color: #27281b;
-}
-
-.header--light .nav-link:hover,
-.header--light .nav-link.active {
-    color: #9a9370;
-}
-
-.header--light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(39,40,27)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-.header--light .navbar-nav .nav-link.show{
-    color:#9a9370;
-}
 
 /*CAROUSEL (HEADER TRANSPARANTE)*/
 
 .carousel-home {
-    height: 100vh;
+    height: $altura-carru;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h1{
+        font-size: 5.3rem;
+    color: $color-accent;
+    }
+
+    h2{
+  font-size: 1.8rem;
+    padding-top: 1rem;
+    color: $color-accent;
+    }
 }
 
 .carousel-item {
-    height: 100vh;
+    height: $altura-carru;
     overflow: hidden;
-}
 
-.carousel-item img {
-    width: 100%;
+    img{
+        width: 100%;
     height: 100%;
     object-fit: cover;
     animation: slowZoom 20s ease-in-out forwards;
+    }
 }
 
 @keyframes slowZoom {
@@ -184,17 +200,6 @@
     to {
         transform: scale(1.1);
     }
-}
-
-.carousel-home h1 {
-    font-size: 5.3rem;
-    color: #f0e4af;
-}
-
-.carousel-home h2 {
-    font-size: 1.8rem;
-    padding-top: 1rem;
-    color: #f0e4af;
 }
 
 .carousel-control-next-icon {

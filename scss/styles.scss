@@ -1,6 +1,9 @@
-@import "utilities/extends";
+@import "utilities/variables";
+@import "layout/header";
+
+
 @import "utilities/mq";
 @import "base/base";
-@import "layout/header";
+
 @import "layout/main";
 @import "layout/footer";
