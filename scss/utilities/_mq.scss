@@ -1,0 +1,150 @@
+
+/*--RESPONSIVE--*/
+
+/*TABLET*/
+
+@media (max-width: 992px) {
+    .colecciones-arte {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/*PC*/
+
+@media (min-width:992px) {
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 60%;
+        transform: translateX(-60%);
+        width: 0;
+        height: 1px;
+        background-color: #9a9370;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 90%;
+        visibility: visible;
+    }
+
+    .offcanvas-social {
+        display: none !important;
+    }
+}
+
+
+
+
+
+/*MOB*/
+
+@media (max-width: 576px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .tickets-button {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        min-height: 340px;
+
+    }
+
+    .footer-menu ul {
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .quienes-somos {
+        padding: 3rem 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "imagen2"
+            "imagen1"
+            "texto2";
+    }
+
+    .carousel-home h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .hero-slider-inner {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-slider-imagenes {
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-slider-titulo {
+        font-size: 2.6rem;
+        max-width: 100%;
+    }
+
+
+    .header--light .nav-link {
+        color: #9a9370;
+    }
+
+    .header--light .nav-link:hover,
+    .header--light .nav-link.active {
+        color: #f0e4af;
+    }
+
+    .exh-fot{
+    height: 40vh;
+    overflow: hidden;
+    }
+
+    .exh-fot img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .hero-simple {
+        height: 40vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+.formulario {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "image"
+        "form";
+    }
+
+    .form-img-inner {
+        height: 300px; /* o el tamaño que prefieras en móvil */
+        object-position: top;
+    }
+
+    .form-text {
+        padding: 0 5%;
+    }
+}

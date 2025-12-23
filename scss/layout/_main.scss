@@ -1,0 +1,248 @@
+
+/*--MAIN--*/
+
+/*QUIENES SOMOS*/
+
+.quienes-somos-container {
+    background-image: url("../img/lumen-textura-fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienes-somos {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "intro   imagen2"
+        "imagen1    imagen2"
+        "imagen1    texto2";
+    gap: 2rem;
+    align-items: end;
+    color: #f0e4af;
+}
+
+.quienes-intro {
+    grid-area: intro;
+}
+
+.quienes-imagen1 {
+    grid-area: imagen1;
+}
+
+.quienes-imagen2 {
+    grid-area: imagen2;
+}
+
+.quienes-texto2 {
+    grid-area: texto2;
+}
+
+.quienes-somos img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/*COLECCIONES*/
+
+.colecciones {
+    width: 95%;
+    margin: auto;
+    padding: 4.5em 0;
+
+}
+
+.colecciones-arte {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25em;
+}
+
+.card {
+    border: 0px;
+    border-radius: 5px;
+    min-height: 500px;
+    font-weight: 300;
+    padding: 1.25em;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background-size 0.35s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background-size: 103%;
+
+
+}
+
+
+.card-textos {
+    color: #f0e4af;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.colecciones-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+/*PAGINAS INTERNAS*/
+
+/*EXHIBICIONES*/
+
+/* SECCIÓN HERO COLECCIÓN */
+
+.hero-slider {
+    background-image: url("../img/lumen-textura-fondo.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    color: #f0e4af;
+}
+
+.hero-slider-inner {
+    width: 92%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-slider-texto .subtitle {
+    color: #9a9370;
+    letter-spacing: 0.14em;
+}
+
+.hero-slider-titulo {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+/* Imágenes de la derecha */
+
+.hero-slider-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.hero-slider-imagenes img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/*Cars Exhibiciones*/
+
+.exhibiciones .card {
+    min-height: 27rem;
+}
+
+/*CONTACTO*/
+
+.hero-simple {
+    height: 55vh;
+    overflow: hidden;
+}
+
+.hero-simple .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.65);
+}
+
+.hero-simple .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0e4af;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+
+}
+
+.hero-sub {
+    font-size: 1.25rem;
+    opacity: .9;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "image form";
+    align-items: center;
+    gap:2rem;
+}
+
+.form-text {
+    grid-area: form;
+    text-align:left;
+    padding: 0% 14%;
+}
+
+
+.form-img{
+    grid-area:image;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.form-img-inner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.form-control{
+    background-color:transparent;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding-left: 0px;
+    border-bottom: 1px solid #c5c6a7;
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    color: #27281b !important;
+    background-color:transparent;
+    border-color: #27281b;
+    box-shadow: none;
+}
