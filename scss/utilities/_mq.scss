@@ -1,58 +1,8 @@
-
 /*--RESPONSIVE--*/
-
-/*TABLET*/
-
-@media (max-width: 992px) {
-    .colecciones-arte {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-
-
-/*PC*/
-
-@media (min-width:992px) {
-
-    .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 60%;
-        transform: translateX(-60%);
-        width: 0;
-        height: 1px;
-        background-color: $color-light;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
-
-
-    .nav-link:hover::before,
-    .nav-link.active::before {
-        width: 90%;
-        visibility: visible;
-    }
-
-    .offcanvas-social {
-        display: none !important;
-    }
-}
-
-
-
-
 
 /*MOB*/
 
-@media (max-width: 576px) {
+@media (max-width: $pantalla-celu) {
 
     h2 {
         font-size: 2rem;
@@ -68,10 +18,12 @@
 
     }
 
-    .footer-menu ul {
-        gap: 1rem;
-        flex-direction: column;
-        justify-content: flex-start;
+    .footer-menu {
+        ul {
+            gap: 1rem;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
     }
 
     .quienes-somos {
@@ -84,61 +36,73 @@
             "texto2";
     }
 
-    .carousel-home h1 {
-        font-size: 4rem;
-        text-align: center;
+    .carousel-home {
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
     }
 
-    .hero-slider-inner {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .hero-slider {
+        &-inner {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        &-imagenes {
+            grid-template-columns: 1fr;
+
+        }
+
+        &-titulo {
+            font-size: 2.6rem;
+            max-width: 100%;
+        }
     }
 
-    .hero-slider-imagenes {
-        grid-template-columns: 1fr;
 
+    .header--light {
+        .nav-link {
+            color: $color-light;
+
+            &:hover,
+            &.active {
+                color: $color-accent;
+            }
+        }
     }
 
-    .hero-slider-titulo {
-        font-size: 2.6rem;
-        max-width: 100%;
-    }
 
 
-    .header--light .nav-link {
-        color: $color-light;
-    }
-
-    .header--light .nav-link:hover,
-    .header--light .nav-link.active {
-        color: $color-accent;
-    }
-
-    .exh-fot{
-    height: 40vh;
-    overflow: hidden;
-    }
-
-    .exh-fot img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: left center;
-  }
-
-  .hero-simple {
+    .exh-fot {
         height: 40vh;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: left center;
+        }
     }
 
-    .hero-title {
-        font-size: 2rem;
+
+    .hero {
+        &-simple {
+            height: 40vh;
+        }
+
+        &-title {
+            font-size: 2rem;
+        }
+
     }
 
-.formulario {
+    .formulario {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "image"
-        "form";
+            "image"
+            "form";
     }
 
     .form-img-inner {
@@ -149,4 +113,48 @@
     .form-text {
         padding: 0 5%;
     }
+}
+
+/*TABLET*/
+
+@media (max-width: $pantalla-tablet) {
+    .colecciones-arte {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/*PC*/
+
+@media (min-width:$pantalla-desktop) {
+
+    .nav-link {
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 60%;
+            transform: translateX(-60%);
+            width: 0;
+            height: 1px;
+            background-color: $color-light;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover::before,
+        &.active::before {
+            width: 90%;
+            visibility: visible;
+        }
+    }
+
+    .offcanvas-social {
+        display: none !important;
+    }
+
 }
