@@ -1,3 +1,7 @@
 
 /*--USO DE MIXIN--*/
 
+@mixin container($width: 92%) {
+  width: $width;
+  margin: 0 auto;
+}
