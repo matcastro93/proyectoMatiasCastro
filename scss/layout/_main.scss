@@ -160,6 +160,30 @@
     }
 }
 
+/*EXPLORÁ ARTE*/
+
+.explora-arte{
+    text-align:justify;
+}
+
+.carousel-explora {
+  height: $altura-carru-explora; // 80vh
+  overflow: hidden;
+
+  .carousel-inner,
+  .carousel-item {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
 /*CONTACTO*/
 
 .hero-simple {
